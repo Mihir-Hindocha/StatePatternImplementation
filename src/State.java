@@ -3,5 +3,5 @@
  * */
 
 public interface State {
-
+    void performOperation(Calculator calculator, char input);
 }
