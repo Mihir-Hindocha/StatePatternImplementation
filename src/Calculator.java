@@ -29,7 +29,7 @@ class Calculator {
     }
 
     void calculate(String input) {
-        setCurrentState(new S0());
+        setCurrentState(S0.getInstance());
 
         int length = input.length();
         char inputArray[];
