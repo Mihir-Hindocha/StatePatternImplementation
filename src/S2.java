@@ -22,10 +22,10 @@ public class S2 implements State {
             calculator.updateN(calculator.getN() * 10 + c);
             calculator.changeState(S2.getInstance());
         } else if (input == '+') {
-            calculator.updateN(calculator.getN());
+            calculator.updateTotal(calculator.getN());
             calculator.changeState(S4.getInstance());
         } else if (input == '-') {
-            calculator.updateN(calculator.getN());
+            calculator.updateTotal(calculator.getN());
             calculator.changeState(S3.getInstance());
         } else
             System.out.println("Error in input of State 2");
