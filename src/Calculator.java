@@ -3,24 +3,36 @@
  */
 
 class Calculator {
+
     private int total;
     private int n;
-    private int c;
     private State currentState;
 
     void changeState(State newState) {
-        this.currentState = newState;
+        currentState = newState;
     }
 
     void updateN(int newN) {
-        this.n = newN;
+        n = newN;
     }
 
-     void updateTotal(int newValue) {
+    public int getN() {
+        return n;
+    }
+
+    void updateTotal(int newValue) {
         this.total = newValue;
     }
 
-     State getCurrentState() {
+    public int getTotal() {
+        return total;
+    }
+
+    public void printTotal() {
+        System.out.println(getTotal());
+    }
+
+    State getCurrentState() {
         return currentState;
     }
 
@@ -42,7 +54,16 @@ class Calculator {
                 System.out.println("Null Received in the Input!!");
             }
         }
-
+        if (currentState.equals(S1.getInstance())) {
+            updateTotal(getN());
+        } else if (currentState.equals(S2.getInstance())) {
+            updateTotal(getN());
+        } else if (currentState.equals(S5.getInstance())) {
+            updateTotal(getTotal() - getN());
+        } else if (currentState.equals(S6.getInstance())) {
+            updateTotal(getTotal() + getN());
+        } else
+            System.out.println("!!! Invalid Input String !!! Did not evaluate!");
+        printTotal();
     }
-
 }
