@@ -63,7 +63,7 @@ class Calculator {
         } else if (currentState.equals(S6.getInstance())) {
             updateTotal(getTotal() + getN());
         } else
-            System.out.println("!!! Invalid Input String !!! Did not evaluate!");
+            throw new java.lang.Error("Invalid input encountered. Please check and try again.");
         printTotal();
     }
 }

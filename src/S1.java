@@ -15,8 +15,7 @@ public class S1 implements State {
 
     @Override
     public void performOperation(Calculator calculator, char input) {
-//        System.out.println("Entered the function in State 1 Successfully!!");
-//        System.out.println("Input received at State 1 is " + input);
+
         int c = Character.getNumericValue(input);
         if (c >= 0) {
             calculator.updateN(calculator.getN() * 10 + c);
@@ -28,6 +27,6 @@ public class S1 implements State {
             calculator.updateN(calculator.getN());
             calculator.changeState(S3.getInstance());
         } else
-            System.out.println("Error in input of State 1");
+            throw new java.lang.Error("Invalid input encountered. Please check and try again.");
     }
 }

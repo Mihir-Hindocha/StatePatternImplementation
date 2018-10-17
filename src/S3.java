@@ -15,15 +15,12 @@ public class S3 implements State {
 
     @Override
     public void performOperation(Calculator calculator, char input) {
-//        System.out.println("Entered the function in State 3 Successfully!!");
-//        System.out.println("Input received at State 3 is " + input);
-//        calculator.changeState(S4.getInstance());
 
         int c = Character.getNumericValue(input);
         if (c > 0) {
             calculator.updateN(c);
             calculator.changeState(S5.getInstance());
         } else
-            System.out.println("Error in input of State 3");
+            throw new java.lang.Error("Invalid input encountered. Please check and try again.");
     }
 }

@@ -9,17 +9,17 @@ public class Application {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
-        Calculator trial = new Calculator();
-        trial.calculate(input);
+        Calculator calculator = new Calculator();
+        calculator.calculate(input);
     }
 }
 /**
  * Run Application.java as Java Application
- *
+ * <p>
  * Sample Input : 123+456
- *
+ * <p>
  * Sample output:
- *
+ * <p>
  * Entered the function in State 0 Successfully!!
  * Input received at State 0 is 1
  * Entered the function in State 1 Successfully!!
@@ -34,5 +34,4 @@ public class Application {
  * Input received at State 5 is 5
  * Entered the function in State 6 Successfully!!
  * Input received at State 6 is 6
- *
- * */
+ */
