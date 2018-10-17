@@ -1,5 +1,5 @@
 /**
- * This interface will be implemented by the various different states.
+ * This interface will be implemented by the various different state classes.
  */
 
 public interface State {

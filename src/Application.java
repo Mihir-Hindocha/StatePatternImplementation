@@ -16,22 +16,14 @@ public class Application {
 /**
  * Run Application.java as Java Application
  * <p>
- * Sample Input : 123+456
+ * Sample Input :           Sample Output:
+ * 123+456                  579
+ * 5234-1462                3772
+ * 1+2                      3
+ * 34+12-6                  40
+ * 1*2                      Exception in thread "main" java.lang.Error: Invalid input encountered. Please check and try again.
+ *                              at S1.performOperation(S1.java:35)
+ *                              at Calculator.calculate(Calculator.java:63)
+ *                              at Application.main(Application.java:13)
  * <p>
- * Sample output:
- * <p>
- * Entered the function in State 0 Successfully!!
- * Input received at State 0 is 1
- * Entered the function in State 1 Successfully!!
- * Input received at State 1 is 2
- * Entered the function in State 2 Successfully!!
- * Input received at State 2 is 3
- * Entered the function in State 3 Successfully!!
- * Input received at State 3 is +
- * Entered the function in State 4 Successfully!!
- * Input received at State 4 is 4
- * Entered the function in State 5 Successfully!!
- * Input received at State 5 is 5
- * Entered the function in State 6 Successfully!!
- * Input received at State 6 is 6
  */
